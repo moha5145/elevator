@@ -11,12 +11,12 @@ function App() {
   const [stageToGo, setStageToGo] = useState(3);
   const [doorOne, setDoorOne] = useState("open");
 
-  const [currentStageBTwo, setCurrentStageBTwo] = useState(3);
-  const [stageToGoBTwo, setStageToGoBTwo] = useState(3);
+  const [currentStageBTwo, setCurrentStageBTwo] = useState(0);
+  const [stageToGoBTwo, setStageToGoBTwo] = useState(0);
   const [doorBTwo, setDoorBTwo] = useState("open");
 
   return (
-    <div className="App flex flex-wrap gap-1 md:gap-5 justify-center pt-4">
+    <div className="App flex flex-wrap gap-1 md:gap-5 justify-center pt-4 px-1 md:px-0">
       <div className="flex gap-3">
         <BuildingOne
           currentStage={currentStage}

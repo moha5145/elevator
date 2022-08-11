@@ -20,8 +20,8 @@ const PanelTwo = ({ currentStageBTwo, setCurrentStageBTwo, stageToGoBTwo, setSta
     { number: -3 },
     { number: -4 },
     { number: -5 },
-    { number: -6 },
   ];
+
   const close = (stage, door) => {
     setPanelBtn(stage);
     setStageToGoBTwo(stage);
@@ -79,186 +79,38 @@ const PanelTwo = ({ currentStageBTwo, setCurrentStageBTwo, stageToGoBTwo, setSta
   };
   return (
     <div>
-      <h2 className="text-center">Panneau interne n°1</h2>
+      <h2 className="text-center">Panneau interne n°2</h2>
 
-      <div>
-        <div className="grid grid-cols-2 gap-0 md:gap-2 justify-center items-center border-4">
-          {stages.map((stage, index) => {
-            console.log(stages[index].number);
-            return (
-              <div key={index}>
-                {stage.number === 10 && (
-                  <div
-                    className={`  md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 ${
-                      panelBtn === 10 ? "bg-green-500" : ""
-                    }`}
-                    onClick={() => {
-                      handelClick(stage.number);
-                    }}
-                  >
-                    {stage.number}
-                  </div>
-                )}
-
-                {stage.number === 9 && (
-                  <div
-                    className={` md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 ${
-                      panelBtn === 9 ? "bg-green-500" : ""
-                    }`}
-                    onClick={() => {
-                      handelClick(stage.number);
-                    }}
-                  >
-                    {stage.number}
-                  </div>
-                )}
-
-                {stage.number === 8 && (
-                  <div
-                    className={`  md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 ${
-                      panelBtn === 8 ? "bg-green-500" : ""
-                    }`}
-                    onClick={() => {
-                      handelClick(stage.number);
-                    }}
-                  >
-                    {stage.number}
-                  </div>
-                )}
-
-                {stages[index].number === 6 && (
-                  <div
-                    className={`  md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 ${
-                      panelBtn === 6 ? "bg-green-500" : ""
-                    }`}
-                    onClick={() => {
-                      handelClick(stage.number);
-                    }}
-                  >
-                    {stage.number}
-                  </div>
-                )}
-
-                {stages[index].number === 4 && (
-                  <div
-                    className={`  md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 ${
-                      panelBtn === 4 ? "bg-green-500" : ""
-                    }`}
-                    onClick={() => {
-                      handelClick(stage.number);
-                    }}
-                  >
-                    {stage.number}
-                  </div>
-                )}
-
-                {stages[index].number === 2 && (
-                  <div
-                    className={`  md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 ${
-                      panelBtn === 2 ? "bg-green-500" : ""
-                    }`}
-                    onClick={() => {
-                      handelClick(stage.number);
-                    }}
-                  >
-                    {stage.number}
-                  </div>
-                )}
-
-                {stages[index].number === 0 && (
-                  <div
-                    className={`  md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60  ${
-                      panelBtn === 0 ? "bg-green-500" : ""
-                    }`}
-                    onClick={() => {
-                      handelClick(stage.number);
-                    }}
-                  >
-                    R.C
-                  </div>
-                )}
-
-                {stages[index].number === -1 && (
-                  <div
-                    className={` md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 ${
-                      panelBtn === -1 ? "bg-green-500" : ""
-                    }`}
-                    onClick={() => {
-                      handelClick(stage.number);
-                    }}
-                  >
-                    {stage.number}
-                  </div>
-                )}
-
-                {stages[index].number === -2 && (
-                  <div
-                    className={`  md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 ${
-                      panelBtn === -2 ? "bg-green-500" : ""
-                    }`}
-                    onClick={() => {
-                      handelClick(stage.number);
-                    }}
-                  >
-                    {stage.number}
-                  </div>
-                )}
-
-                {stages[index].number === -3 && (
-                  <div
-                    className={`  md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 ${
-                      panelBtn === -3 ? "bg-green-500" : ""
-                    }`}
-                    onClick={() => {
-                      handelClick(stage.number);
-                    }}
-                  >
-                    {stage.number}
-                  </div>
-                )}
-                {stages[index].number === -4 && (
-                  <div
-                    className={` md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 ${
-                      panelBtn === -4 ? "bg-green-500" : ""
-                    }`}
-                    onClick={() => {
-                      handelClick(stage.number);
-                    }}
-                  >
-                    {stage.number}
-                  </div>
-                )}
-
-                {stages[index].number === -5 && (
-                  <div
-                    className={`  md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 ${
-                      panelBtn === -5 ? "bg-green-500" : ""
-                    }`}
-                    onClick={() => {
-                      handelClick(stage.number);
-                    }}
-                  >
-                    {stage.number}
-                  </div>
-                )}
-              </div>
-            );
-          })}
-
-          <div className=" border-2">
-            <div className="  flex  justify-center">
-              <div className={`flex-1  ${stageToGoBTwo > currentStageBTwo ? "bg-green-400" : ""}`}>
-                <FaLongArrowAltUp size={40} className="" />
-              </div>
-              <div className={`flex-1  ${stageToGoBTwo < currentStageBTwo ? "bg-green-400" : ""}`}>
-                <FaLongArrowAltDown size={40} />
-              </div>
+      <div className="grid grid-cols-2 gap-0 md:gap-2 justify-center items-center border-4">
+        {stages.map((stage, index) => {
+          return (
+            <div
+              key={index}
+              className={`  md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 ${
+                panelBtn === stages[index].number ? "bg-green-500" : ""
+              }`}
+              onClick={() => {
+                handelClick(stages[index].number);
+              }}
+            >
+              {stages[index].number === 0 ? "R.C" : stages[index].number}
             </div>
-            <div className=" flex justify-center">
-              <CgArrowsMergeAltH size={40} className={`flex-1  ${doorBTwo === "closed" ? "bg-green-400" : ""}`} />
+          );
+        })}
 
-              <CgArrowsShrinkH size={40} className={`flex-1  ${doorBTwo === "open" ? "bg-green-400" : ""}`} />
+        <div className=" border-2">
+          <div className="  flex  justify-center">
+            <div className={`flex-1  ${stageToGoBTwo > currentStageBTwo ? "bg-green-400" : ""}`}>
+              <FaLongArrowAltUp className="text-xl md:text-4xl " />
             </div>
+            <div className={`flex-1  ${stageToGoBTwo < currentStageBTwo ? "bg-green-400" : ""}`}>
+              <FaLongArrowAltDown className="text-xl md:text-4xl " />
+            </div>
+          </div>
+          <div className=" flex justify-center">
+            <CgArrowsMergeAltH className={`flex-1 text-xl md:text-4xl  ${doorBTwo === "closed" ? "bg-green-400" : ""}`} />
+
+            <CgArrowsShrinkH className={`flex-1 text-xl md:text-4xl ${doorBTwo === "open" ? "bg-green-400" : ""}`} />
           </div>
         </div>
       </div>

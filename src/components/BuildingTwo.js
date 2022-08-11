@@ -77,88 +77,15 @@ const BuildingTwo = ({ currentStageBTwo, setCurrentStageBTwo, stageToGoBTwo, set
       <div>
         {stages.map((stage, index) => {
           return (
-            <div className="flex  justify-center items-center border-4">
+            <div className="flex  justify-center items-center border-4" key={index}>
               <div className=" w-20 md:w-24 py-4 md:py-6">{stage.name}</div>
               <div className=" w-20 md:w-24 py-4 md:py-6 border-x-2 flex justify-center">
-                {stages[index].number === 10 && (
-                  <BsCircle
-                    size={25}
-                    className={` rounded-full ${currentStageBTwo === 10 ? "bg-green-500 text-green-700" : stageToGoBTwo === 10 ? "bg-orange-500" : ""}`}
-                  />
-                )}
-                {stages[index].number === 9 && (
-                  <BsCircle
-                    size={25}
-                    className={` rounded-full ${currentStageBTwo === 9 ? "bg-green-500 text-green-700" : stageToGoBTwo === 9 ? "bg-orange-500" : ""}`}
-                  />
-                )}
-                {stages[index].number === 8 && (
-                  <BsCircle
-                    size={25}
-                    className={` rounded-full ${currentStageBTwo === 8 ? "bg-green-500 text-green-700" : stageToGoBTwo === 8 ? "bg-orange-500" : ""}`}
-                  />
-                )}
-
-                {stages[index].number === 6 && (
-                  <BsCircle
-                    size={25}
-                    className={` rounded-full ${currentStageBTwo === 6 ? "bg-green-500 text-green-700" : stageToGoBTwo === 6 ? "bg-orange-500" : ""}`}
-                  />
-                )}
-
-                {stages[index].number === 4 && (
-                  <BsCircle
-                    size={25}
-                    className={` rounded-full ${currentStageBTwo === 4 ? "bg-green-500 text-green-700" : stageToGoBTwo === 4 ? "bg-orange-500" : ""}`}
-                  />
-                )}
-
-                {stages[index].number === 2 && (
-                  <BsCircle
-                    size={25}
-                    className={` rounded-full ${currentStageBTwo === 2 ? "bg-green-500 text-green-700" : stageToGoBTwo === 2 ? "bg-orange-500" : ""}`}
-                  />
-                )}
-
-                {stages[index].number === 0 && (
-                  <BsCircle
-                    size={25}
-                    className={` rounded-full ${currentStageBTwo === 0 ? "bg-green-500 text-green-700" : stageToGoBTwo === 0 ? "bg-orange-500" : ""}`}
-                  />
-                )}
-
-                {stages[index].number === -1 && (
-                  <BsCircle
-                    size={25}
-                    className={` rounded-full ${currentStageBTwo === -1 ? "bg-green-500 text-green-700" : stageToGoBTwo === -1 ? "bg-orange-500" : ""}`}
-                  />
-                )}
-
-                {stages[index].number === -2 && (
-                  <BsCircle
-                    size={25}
-                    className={` rounded-full ${currentStageBTwo === -2 ? "bg-green-500 text-green-700" : stageToGoBTwo === -2 ? "bg-orange-500" : ""}`}
-                  />
-                )}
-                {stages[index].number === -3 && (
-                  <BsCircle
-                    size={25}
-                    className={` rounded-full ${currentStageBTwo === -3 ? "bg-green-500 text-green-700" : stageToGoBTwo === -3 ? "bg-orange-500" : ""}`}
-                  />
-                )}
-                {stages[index].number === -4 && (
-                  <BsCircle
-                    size={25}
-                    className={` rounded-full ${currentStageBTwo === -4 ? "bg-green-500 text-green-700" : stageToGoBTwo === -4 ? "bg-orange-500" : ""}`}
-                  />
-                )}
-
-                {stages[index].number === -5 && (
-                  <BsCircle
-                    size={25}
-                    className={` rounded-full ${currentStageBTwo === -5 ? "bg-green-500 text-green-700" : stageToGoBTwo === -5 ? "bg-orange-500" : ""}`}
-                  />
-                )}
+                <BsCircle
+                  size={25}
+                  className={` rounded-full ${
+                    currentStageBTwo === stages[index].number ? "bg-green-500 text-green-700" : stageToGoBTwo === stages[index].number ? "bg-orange-500" : ""
+                  }`}
+                />
               </div>
               <div
                 className="w-20 md:w-24 py-4 md:py-6 flex justify-center cursor-pointer hover:opacity-60 "
