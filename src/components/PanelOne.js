@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { BsArrowUp, BsArrowDown } from "react-icons/bs";
 
+import { FaLongArrowAltDown, FaLongArrowAltUp } from "react-icons/fa";
 import { CgArrowsMergeAltH, CgArrowsShrinkH } from "react-icons/cg";
 
 const PanelOne = ({ stageToGo, setStageToGo, currentStage, setCurrentStage, doorOne, setDoorOne }) => {
@@ -208,10 +208,10 @@ const PanelOne = ({ stageToGo, setStageToGo, currentStage, setCurrentStage, door
           <div className=" border-2">
             <div className="  flex  justify-center">
               <div className={`flex-1  ${stageToGo > currentStage ? "bg-green-400" : ""}`}>
-                <BsArrowUp size={40} className="" />
+                <FaLongArrowAltUp size={40} className="" />
               </div>
               <div className={`flex-1  ${stageToGo < currentStage ? "bg-green-400" : ""}`}>
-                <BsArrowDown size={40} />
+                <FaLongArrowAltDown size={40} />
               </div>
             </div>
             <div className=" flex justify-center">
