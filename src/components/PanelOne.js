@@ -76,14 +76,16 @@ const PanelOne = ({ stageToGo, setStageToGo, currentStage, setCurrentStage, door
       <h2 className="text-center">Panneau interne n°1</h2>
 
       <div>
-        <div className="grid grid-cols-2 gap-2 justify-center items-center border-4">
+        <div className="grid grid-cols-2 gap:0 sm:gap-2 justify-center items-center border-4">
           {stages.map((stage, index) => {
             console.log(stages[index].number);
             return (
               <div key={index}>
                 {stage.number === 10 && (
                   <div
-                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === 10 ? "bg-green-500" : ""}`}
+                    className={` md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 text-xl md:text-4xl ${
+                      panelBtn === 10 ? "bg-green-500" : ""
+                    }`}
                     onClick={() => {
                       handelClick(stage.number);
                     }}
@@ -94,7 +96,9 @@ const PanelOne = ({ stageToGo, setStageToGo, currentStage, setCurrentStage, door
 
                 {stage.number === 9 && (
                   <div
-                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === 9 ? "bg-green-500" : ""}`}
+                    className={`  md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 text-xl md:text-4xl ${
+                      panelBtn === 9 ? "bg-green-500" : ""
+                    }`}
                     onClick={() => {
                       handelClick(stage.number);
                     }}
@@ -105,7 +109,9 @@ const PanelOne = ({ stageToGo, setStageToGo, currentStage, setCurrentStage, door
 
                 {stage.number === 8 && (
                   <div
-                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === 8 ? "bg-green-500" : ""}`}
+                    className={`  md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 text-xl md:text-4xl ${
+                      panelBtn === 8 ? "bg-green-500" : ""
+                    }`}
                     onClick={() => {
                       handelClick(stage.number);
                     }}
@@ -116,7 +122,9 @@ const PanelOne = ({ stageToGo, setStageToGo, currentStage, setCurrentStage, door
 
                 {stages[index].number === 7 && (
                   <div
-                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === 7 ? "bg-green-500" : ""}`}
+                    className={`  md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 text-xl md:text-4xl ${
+                      panelBtn === 7 ? "bg-green-500" : ""
+                    }`}
                     onClick={() => {
                       handelClick(stage.number);
                     }}
@@ -127,7 +135,9 @@ const PanelOne = ({ stageToGo, setStageToGo, currentStage, setCurrentStage, door
 
                 {stages[index].number === 6 && (
                   <div
-                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === 6 ? "bg-green-500" : ""}`}
+                    className={`  md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 text-xl md:text-4xl ${
+                      panelBtn === 6 ? "bg-green-500" : ""
+                    }`}
                     onClick={() => {
                       handelClick(stage.number);
                     }}
@@ -138,7 +148,9 @@ const PanelOne = ({ stageToGo, setStageToGo, currentStage, setCurrentStage, door
 
                 {stages[index].number === 5 && (
                   <div
-                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === 5 ? "bg-green-500" : ""}`}
+                    className={` md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 text-xl md:text-4xl ${
+                      panelBtn === 5 ? "bg-green-500" : ""
+                    }`}
                     onClick={() => {
                       handelClick(stage.number);
                     }}
@@ -149,7 +161,9 @@ const PanelOne = ({ stageToGo, setStageToGo, currentStage, setCurrentStage, door
 
                 {stages[index].number === 4 && (
                   <div
-                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === 4 ? "bg-green-500" : ""}`}
+                    className={`  md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 text-xl md:text-4xl ${
+                      panelBtn === 4 ? "bg-green-500" : ""
+                    }`}
                     onClick={() => {
                       handelClick(stage.number);
                     }}
@@ -160,7 +174,9 @@ const PanelOne = ({ stageToGo, setStageToGo, currentStage, setCurrentStage, door
 
                 {stages[index].number === 3 && (
                   <div
-                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === 3 ? "bg-green-500" : ""}`}
+                    className={` md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 text-xl md:text-4xl ${
+                      panelBtn === 3 ? "bg-green-500" : ""
+                    }`}
                     onClick={() => {
                       handelClick(stage.number);
                     }}
@@ -171,7 +187,9 @@ const PanelOne = ({ stageToGo, setStageToGo, currentStage, setCurrentStage, door
 
                 {stages[index].number === 2 && (
                   <div
-                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === 2 ? "bg-green-500" : ""}`}
+                    className={`  md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 text-xl md:text-4xl ${
+                      panelBtn === 2 ? "bg-green-500" : ""
+                    }`}
                     onClick={() => {
                       handelClick(stage.number);
                     }}
@@ -182,7 +200,9 @@ const PanelOne = ({ stageToGo, setStageToGo, currentStage, setCurrentStage, door
 
                 {stages[index].number === 1 && (
                   <div
-                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === 1 ? "bg-green-500" : ""}`}
+                    className={` md:w-24 py-3 md:py-7 text-xl md:text-4xl border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60  ${
+                      panelBtn === 1 ? "bg-green-500" : ""
+                    }`}
                     onClick={() => {
                       handelClick(stage.number);
                     }}
@@ -193,7 +213,9 @@ const PanelOne = ({ stageToGo, setStageToGo, currentStage, setCurrentStage, door
 
                 {stages[index].number === 0 && (
                   <div
-                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === 0 ? "bg-green-500" : ""}`}
+                    className={` md:w-24 py-3 md:py-7 border-x-1 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 text-2xl md:text-4xl ${
+                      panelBtn === 0 ? "bg-green-500" : ""
+                    }`}
                     onClick={() => {
                       handelClick(stage.number);
                     }}
@@ -205,19 +227,19 @@ const PanelOne = ({ stageToGo, setStageToGo, currentStage, setCurrentStage, door
             );
           })}
 
-          <div className=" border-2">
-            <div className="  flex  justify-center">
+          <div className=" border-2  md:w-24 py-3 md:py-7 flex flex-col ">
+            <div className="  flex  justify-center ">
               <div className={`flex-1  ${stageToGo > currentStage ? "bg-green-400" : ""}`}>
-                <FaLongArrowAltUp size={40} className="" />
+                <FaLongArrowAltUp className="text-xl md:text-4xl " />
               </div>
               <div className={`flex-1  ${stageToGo < currentStage ? "bg-green-400" : ""}`}>
-                <FaLongArrowAltDown size={40} />
+                <FaLongArrowAltDown className="text-xl md:text-4xl " />
               </div>
             </div>
             <div className=" flex justify-center">
-              <CgArrowsMergeAltH size={40} className={`flex-1  ${doorOne === "closed" ? "bg-green-400" : ""}`} />
+              <CgArrowsMergeAltH className={`flex-1 text-xl md:text-4xl  ${doorOne === "closed" ? "bg-green-400" : ""}`} />
 
-              <CgArrowsShrinkH size={40} className={`flex-1  ${doorOne === "open" ? "bg-green-400" : ""}`} />
+              <CgArrowsShrinkH className={`flex-1 text-xl md:text-4xl ${doorOne === "open" ? "bg-green-400" : ""}`} />
             </div>
           </div>
         </div>

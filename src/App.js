@@ -16,41 +16,45 @@ function App() {
   const [doorBTwo, setDoorBTwo] = useState("open");
 
   return (
-    <div className="App flex gap-5">
-      <BuildingOne
-        currentStage={currentStage}
-        setCurrentStage={setCurrentStage}
-        stageToGo={stageToGo}
-        setStageToGo={setStageToGo}
-        doorOne={doorOne}
-        setDoorOne={setDoorOne}
-      />
-      <PanelOne
-        stageToGo={stageToGo}
-        setStageToGo={setStageToGo}
-        currentStage={currentStage}
-        setCurrentStage={setCurrentStage}
-        doorOne={doorOne}
-        setDoorOne={setDoorOne}
-      />
+    <div className="App flex flex-wrap gap-1 md:gap-5 justify-center pt-4">
+      <div className="flex gap-3">
+        <BuildingOne
+          currentStage={currentStage}
+          setCurrentStage={setCurrentStage}
+          stageToGo={stageToGo}
+          setStageToGo={setStageToGo}
+          doorOne={doorOne}
+          setDoorOne={setDoorOne}
+        />
+        <PanelOne
+          stageToGo={stageToGo}
+          setStageToGo={setStageToGo}
+          currentStage={currentStage}
+          setCurrentStage={setCurrentStage}
+          doorOne={doorOne}
+          setDoorOne={setDoorOne}
+        />
+      </div>
 
-      <BuildingTwo
-        currentStageBTwo={currentStageBTwo}
-        setCurrentStageBTwo={setCurrentStageBTwo}
-        stageToGoBTwo={stageToGoBTwo}
-        setStageToGoBTwo={setStageToGoBTwo}
-        doorBTwo={doorBTwo}
-        setDoorBTwo={setDoorBTwo}
-      />
+      <div className="flex gap-3">
+        <BuildingTwo
+          currentStageBTwo={currentStageBTwo}
+          setCurrentStageBTwo={setCurrentStageBTwo}
+          stageToGoBTwo={stageToGoBTwo}
+          setStageToGoBTwo={setStageToGoBTwo}
+          doorBTwo={doorBTwo}
+          setDoorBTwo={setDoorBTwo}
+        />
 
-      <PanelTwo
-        currentStageBTwo={currentStageBTwo}
-        setCurrentStageBTwo={setCurrentStageBTwo}
-        stageToGoBTwo={stageToGoBTwo}
-        setStageToGoBTwo={setStageToGoBTwo}
-        doorBTwo={doorBTwo}
-        setDoorBTwo={setDoorBTwo}
-      />
+        <PanelTwo
+          currentStageBTwo={currentStageBTwo}
+          setCurrentStageBTwo={setCurrentStageBTwo}
+          stageToGoBTwo={stageToGoBTwo}
+          setStageToGoBTwo={setStageToGoBTwo}
+          doorBTwo={doorBTwo}
+          setDoorBTwo={setDoorBTwo}
+        />
+      </div>
     </div>
   );
 }

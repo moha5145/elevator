@@ -82,14 +82,16 @@ const PanelTwo = ({ currentStageBTwo, setCurrentStageBTwo, stageToGoBTwo, setSta
       <h2 className="text-center">Panneau interne n°1</h2>
 
       <div>
-        <div className="grid grid-cols-2 gap-2 justify-center items-center border-4">
+        <div className="grid grid-cols-2 gap-0 md:gap-2 justify-center items-center border-4">
           {stages.map((stage, index) => {
             console.log(stages[index].number);
             return (
               <div key={index}>
                 {stage.number === 10 && (
                   <div
-                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === 10 ? "bg-green-500" : ""}`}
+                    className={`  md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 ${
+                      panelBtn === 10 ? "bg-green-500" : ""
+                    }`}
                     onClick={() => {
                       handelClick(stage.number);
                     }}
@@ -100,7 +102,9 @@ const PanelTwo = ({ currentStageBTwo, setCurrentStageBTwo, stageToGoBTwo, setSta
 
                 {stage.number === 9 && (
                   <div
-                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === 9 ? "bg-green-500" : ""}`}
+                    className={` md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 ${
+                      panelBtn === 9 ? "bg-green-500" : ""
+                    }`}
                     onClick={() => {
                       handelClick(stage.number);
                     }}
@@ -111,7 +115,9 @@ const PanelTwo = ({ currentStageBTwo, setCurrentStageBTwo, stageToGoBTwo, setSta
 
                 {stage.number === 8 && (
                   <div
-                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === 8 ? "bg-green-500" : ""}`}
+                    className={`  md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 ${
+                      panelBtn === 8 ? "bg-green-500" : ""
+                    }`}
                     onClick={() => {
                       handelClick(stage.number);
                     }}
@@ -122,7 +128,9 @@ const PanelTwo = ({ currentStageBTwo, setCurrentStageBTwo, stageToGoBTwo, setSta
 
                 {stages[index].number === 6 && (
                   <div
-                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === 6 ? "bg-green-500" : ""}`}
+                    className={`  md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 ${
+                      panelBtn === 6 ? "bg-green-500" : ""
+                    }`}
                     onClick={() => {
                       handelClick(stage.number);
                     }}
@@ -133,7 +141,9 @@ const PanelTwo = ({ currentStageBTwo, setCurrentStageBTwo, stageToGoBTwo, setSta
 
                 {stages[index].number === 4 && (
                   <div
-                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === 4 ? "bg-green-500" : ""}`}
+                    className={`  md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 ${
+                      panelBtn === 4 ? "bg-green-500" : ""
+                    }`}
                     onClick={() => {
                       handelClick(stage.number);
                     }}
@@ -144,7 +154,9 @@ const PanelTwo = ({ currentStageBTwo, setCurrentStageBTwo, stageToGoBTwo, setSta
 
                 {stages[index].number === 2 && (
                   <div
-                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === 2 ? "bg-green-500" : ""}`}
+                    className={`  md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 ${
+                      panelBtn === 2 ? "bg-green-500" : ""
+                    }`}
                     onClick={() => {
                       handelClick(stage.number);
                     }}
@@ -155,7 +167,9 @@ const PanelTwo = ({ currentStageBTwo, setCurrentStageBTwo, stageToGoBTwo, setSta
 
                 {stages[index].number === 0 && (
                   <div
-                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === 0 ? "bg-green-500" : ""}`}
+                    className={`  md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60  ${
+                      panelBtn === 0 ? "bg-green-500" : ""
+                    }`}
                     onClick={() => {
                       handelClick(stage.number);
                     }}
@@ -166,7 +180,9 @@ const PanelTwo = ({ currentStageBTwo, setCurrentStageBTwo, stageToGoBTwo, setSta
 
                 {stages[index].number === -1 && (
                   <div
-                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === -1 ? "bg-green-500" : ""}`}
+                    className={` md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 ${
+                      panelBtn === -1 ? "bg-green-500" : ""
+                    }`}
                     onClick={() => {
                       handelClick(stage.number);
                     }}
@@ -177,7 +193,9 @@ const PanelTwo = ({ currentStageBTwo, setCurrentStageBTwo, stageToGoBTwo, setSta
 
                 {stages[index].number === -2 && (
                   <div
-                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === -2 ? "bg-green-500" : ""}`}
+                    className={`  md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 ${
+                      panelBtn === -2 ? "bg-green-500" : ""
+                    }`}
                     onClick={() => {
                       handelClick(stage.number);
                     }}
@@ -188,7 +206,9 @@ const PanelTwo = ({ currentStageBTwo, setCurrentStageBTwo, stageToGoBTwo, setSta
 
                 {stages[index].number === -3 && (
                   <div
-                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === -3 ? "bg-green-500" : ""}`}
+                    className={`  md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 ${
+                      panelBtn === -3 ? "bg-green-500" : ""
+                    }`}
                     onClick={() => {
                       handelClick(stage.number);
                     }}
@@ -198,7 +218,9 @@ const PanelTwo = ({ currentStageBTwo, setCurrentStageBTwo, stageToGoBTwo, setSta
                 )}
                 {stages[index].number === -4 && (
                   <div
-                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === -4 ? "bg-green-500" : ""}`}
+                    className={` md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 ${
+                      panelBtn === -4 ? "bg-green-500" : ""
+                    }`}
                     onClick={() => {
                       handelClick(stage.number);
                     }}
@@ -209,7 +231,9 @@ const PanelTwo = ({ currentStageBTwo, setCurrentStageBTwo, stageToGoBTwo, setSta
 
                 {stages[index].number === -5 && (
                   <div
-                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === -5 ? "bg-green-500" : ""}`}
+                    className={`  md:w-24 py-3 md:py-7 border-x-[1px] border-y-[1px] md:border-x-2 md:border-y-2 cursor-pointer hover:opacity-60 ${
+                      panelBtn === -5 ? "bg-green-500" : ""
+                    }`}
                     onClick={() => {
                       handelClick(stage.number);
                     }}

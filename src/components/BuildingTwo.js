@@ -78,8 +78,8 @@ const BuildingTwo = ({ currentStageBTwo, setCurrentStageBTwo, stageToGoBTwo, set
         {stages.map((stage, index) => {
           return (
             <div className="flex  justify-center items-center border-4">
-              <div className=" w-24 py-6">{stage.name}</div>
-              <div className=" w-24 py-6 border-x-2 flex justify-center">
+              <div className=" w-20 md:w-24 py-4 md:py-6">{stage.name}</div>
+              <div className=" w-20 md:w-24 py-4 md:py-6 border-x-2 flex justify-center">
                 {stages[index].number === 10 && (
                   <BsCircle
                     size={25}
@@ -161,7 +161,7 @@ const BuildingTwo = ({ currentStageBTwo, setCurrentStageBTwo, stageToGoBTwo, set
                 )}
               </div>
               <div
-                className="py-6 flex justify-center cursor-pointer hover:opacity-60 w-24"
+                className="w-20 md:w-24 py-4 md:py-6 flex justify-center cursor-pointer hover:opacity-60 "
                 onClick={() => {
                   handelClick(stages, index);
                 }}
