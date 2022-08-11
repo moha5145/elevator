@@ -3,34 +3,36 @@ import { BsArrowUp, BsArrowDown } from "react-icons/bs";
 
 import { CgArrowsMergeAltH, CgArrowsShrinkH } from "react-icons/cg";
 
-const PanelOne = ({ stageToGo, setStageToGo, currentStage, setCurrentStage, doorOne, setDoorOne }) => {
+const PanelTwo = ({ currentStageBTwo, setCurrentStageBTwo, stageToGoBTwo, setStageToGoBTwo, doorBTwo, setDoorBTwo }) => {
   const [panelBtn, setPanelBtn] = useState(null);
 
   const stages = [
     { number: 10 },
     { number: 9 },
     { number: 8 },
-    { number: 7 },
     { number: 6 },
-    { number: 5 },
     { number: 4 },
-    { number: 3 },
     { number: 2 },
-    { number: 1 },
     { number: 0 },
+    { number: -1 },
+    { number: -2 },
+    { number: -3 },
+    { number: -4 },
+    { number: -5 },
+    { number: -6 },
   ];
   const close = (stage, door) => {
     setPanelBtn(stage);
-    setStageToGo(stage);
+    setStageToGoBTwo(stage);
     setTimeout(() => {
-      setDoorOne(door);
+      setDoorBTwo(door);
     }, 1000);
   };
 
   const open = (stage, door) => {
     setTimeout(() => {
-      setCurrentStage(stage);
-      setDoorOne(door);
+      setCurrentStageBTwo(stage);
+      setDoorBTwo(door);
       setPanelBtn(null);
     }, 3000);
   };
@@ -45,30 +47,33 @@ const PanelOne = ({ stageToGo, setStageToGo, currentStage, setCurrentStage, door
     } else if (stage === 8) {
       close(8, "closed");
       open(8, "open");
-    } else if (stage === 7) {
-      close(7, "closed");
-      open(7, "open");
     } else if (stage === 6) {
       close(6, "closed");
       open(6, "open");
-    } else if (stage === 5) {
-      close(5, "closed");
-      open(5, "open");
     } else if (stage === 4) {
       close(4, "closed");
       open(4, "open");
-    } else if (stage === 3) {
-      close(3, "closed");
-      open(3, "open");
     } else if (stage === 2) {
       close(2, "closed");
       open(2, "open");
-    } else if (stage === 1) {
-      close(1, "closed");
-      open(1, "open");
     } else if (stage === 0) {
       close(0, "closed");
       open(0, "open");
+    } else if (stage === -1) {
+      close(-1, "closed");
+      open(-1, "open");
+    } else if (stage === -2) {
+      close(-2, "closed");
+      open(-2, "open");
+    } else if (stage === -3) {
+      close(-3, "closed");
+      open(-3, "open");
+    } else if (stage === -4) {
+      close(-4, "closed");
+      open(-4, "open");
+    } else if (stage === -5) {
+      close(-5, "closed");
+      open(-5, "open");
     }
   };
   return (
@@ -114,31 +119,9 @@ const PanelOne = ({ stageToGo, setStageToGo, currentStage, setCurrentStage, door
                   </div>
                 )}
 
-                {stages[index].number === 7 && (
-                  <div
-                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === 7 ? "bg-green-500" : ""}`}
-                    onClick={() => {
-                      handelClick(stage.number);
-                    }}
-                  >
-                    {stage.number}
-                  </div>
-                )}
-
                 {stages[index].number === 6 && (
                   <div
                     className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === 6 ? "bg-green-500" : ""}`}
-                    onClick={() => {
-                      handelClick(stage.number);
-                    }}
-                  >
-                    {stage.number}
-                  </div>
-                )}
-
-                {stages[index].number === 5 && (
-                  <div
-                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === 5 ? "bg-green-500" : ""}`}
                     onClick={() => {
                       handelClick(stage.number);
                     }}
@@ -158,31 +141,9 @@ const PanelOne = ({ stageToGo, setStageToGo, currentStage, setCurrentStage, door
                   </div>
                 )}
 
-                {stages[index].number === 3 && (
-                  <div
-                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === 3 ? "bg-green-500" : ""}`}
-                    onClick={() => {
-                      handelClick(stage.number);
-                    }}
-                  >
-                    {stage.number}
-                  </div>
-                )}
-
                 {stages[index].number === 2 && (
                   <div
                     className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === 2 ? "bg-green-500" : ""}`}
-                    onClick={() => {
-                      handelClick(stage.number);
-                    }}
-                  >
-                    {stage.number}
-                  </div>
-                )}
-
-                {stages[index].number === 1 && (
-                  <div
-                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === 1 ? "bg-green-500" : ""}`}
                     onClick={() => {
                       handelClick(stage.number);
                     }}
@@ -201,23 +162,77 @@ const PanelOne = ({ stageToGo, setStageToGo, currentStage, setCurrentStage, door
                     R.C
                   </div>
                 )}
+
+                {stages[index].number === -1 && (
+                  <div
+                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === -1 ? "bg-green-500" : ""}`}
+                    onClick={() => {
+                      handelClick(stage.number);
+                    }}
+                  >
+                    {stage.number}
+                  </div>
+                )}
+
+                {stages[index].number === -2 && (
+                  <div
+                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === -2 ? "bg-green-500" : ""}`}
+                    onClick={() => {
+                      handelClick(stage.number);
+                    }}
+                  >
+                    {stage.number}
+                  </div>
+                )}
+
+                {stages[index].number === -3 && (
+                  <div
+                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === -3 ? "bg-green-500" : ""}`}
+                    onClick={() => {
+                      handelClick(stage.number);
+                    }}
+                  >
+                    {stage.number}
+                  </div>
+                )}
+                {stages[index].number === -4 && (
+                  <div
+                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === -4 ? "bg-green-500" : ""}`}
+                    onClick={() => {
+                      handelClick(stage.number);
+                    }}
+                  >
+                    {stage.number}
+                  </div>
+                )}
+
+                {stages[index].number === -5 && (
+                  <div
+                    className={` w-24 py-7 row-auto border-x-2 border-y-2 cursor-pointer hover:opacity-60 text-4xl ${panelBtn === -5 ? "bg-green-500" : ""}`}
+                    onClick={() => {
+                      handelClick(stage.number);
+                    }}
+                  >
+                    {stage.number}
+                  </div>
+                )}
               </div>
             );
           })}
 
           <div className=" border-2">
             <div className="  flex  justify-center">
-              <div className={`flex-1  ${stageToGo > currentStage ? "bg-green-400" : ""}`}>
+              <div className={`flex-1  ${stageToGoBTwo > currentStageBTwo ? "bg-green-400" : ""}`}>
                 <BsArrowUp size={40} className="" />
               </div>
-              <div className={`flex-1  ${stageToGo < currentStage ? "bg-green-400" : ""}`}>
+              <div className={`flex-1  ${stageToGoBTwo < currentStageBTwo ? "bg-green-400" : ""}`}>
                 <BsArrowDown size={40} />
               </div>
             </div>
             <div className=" flex justify-center">
-              <CgArrowsMergeAltH size={40} className={`flex-1  ${doorOne === "closed" ? "bg-green-400" : ""}`} />
+              <CgArrowsMergeAltH size={40} className={`flex-1  ${doorBTwo === "closed" ? "bg-green-400" : ""}`} />
 
-              <CgArrowsShrinkH size={40} className={`flex-1  ${doorOne === "open" ? "bg-green-400" : ""}`} />
+              <CgArrowsShrinkH size={40} className={`flex-1  ${doorBTwo === "open" ? "bg-green-400" : ""}`} />
             </div>
           </div>
         </div>
@@ -225,4 +240,4 @@ const PanelOne = ({ stageToGo, setStageToGo, currentStage, setCurrentStage, door
     </div>
   );
 };
-export default PanelOne;
+export default PanelTwo;

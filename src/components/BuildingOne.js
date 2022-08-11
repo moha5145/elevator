@@ -1,6 +1,6 @@
-import { BsCircle, BsFillArrowDownSquareFill, BsArrowUpSquareFill } from "react-icons/bs";
-import { CgPlayButtonR, CgArrowsMergeAltH, CgArrowsShrinkH } from "react-icons/cg";
-const BuildingOne = ({ currentStage, setCurrentStage, stageToGo, setStageToGo, doorOne, setDoorOne }) => {
+import { BsCircle } from "react-icons/bs";
+import { CgPlayButtonR } from "react-icons/cg";
+const BuildingOne = ({ currentStage, setCurrentStage, stageToGo, setStageToGo, setDoorOne }) => {
   const stages = [
     { number: 10, name: "étage 10" },
     { number: 9, name: "étage 9" },
@@ -14,138 +14,54 @@ const BuildingOne = ({ currentStage, setCurrentStage, stageToGo, setStageToGo, d
     { number: 1, name: "étage 1" },
     { number: 0, name: "R.C" },
   ];
+  const open = (stage, door) => {
+    setTimeout(() => {
+      setCurrentStage(stage);
+      setDoorOne(door);
+    }, 3000);
+  };
+
+  const close = (stage, door) => {
+    setStageToGo(stage);
+    setTimeout(() => {
+      setDoorOne(door);
+    }, 1000);
+  };
 
   const handelClick = (stages, i) => {
     if (stages[i].number === 10) {
-      setStageToGo(10);
-      setTimeout(() => {
-        setDoorOne("closed");
-      }, 1000);
-
-      setTimeout(() => {
-        setCurrentStage(10);
-        setDoorOne("open");
-      }, 3000);
+      close(10, "closed");
+      open(10, "open");
     } else if (stages[i].number === 9) {
-      setStageToGo(9);
-      setTimeout(() => {
-        setDoorOne("closed");
-      }, 1000);
-
-      setTimeout(() => {
-        setCurrentStage(9);
-        setDoorOne("open");
-      }, 3000);
+      close(9, "closed");
+      open(9, "open");
     } else if (stages[i].number === 8) {
-      setStageToGo(8);
-      setTimeout(() => {
-        setDoorOne("closed");
-      }, 1000);
-
-      setTimeout(() => {
-        setCurrentStage(8);
-        setDoorOne("open");
-      }, 3000);
+      close(8, "closed");
+      open(8, "open");
     } else if (stages[i].number === 7) {
-      setStageToGo(7);
-      setTimeout(() => {
-        setDoorOne("closed");
-      }, 1000);
-
-      setTimeout(() => {
-        setCurrentStage(7);
-        setDoorOne("open");
-      }, 3000);
+      close(7, "closed");
+      open(7, "open");
     } else if (stages[i].number === 6) {
-      setStageToGo(6);
-      setTimeout(() => {
-        setDoorOne("closed");
-      }, 1000);
-
-      setTimeout(() => {
-        setCurrentStage(6);
-        setDoorOne("open");
-      }, 3000);
-    } else if (stages[i].number === 6) {
-      setStageToGo(6);
-      setTimeout(() => {
-        setDoorOne("closed");
-      }, 1000);
-
-      setTimeout(() => {
-        setCurrentStage(6);
-        setDoorOne("open");
-      }, 3000);
+      close(6, "closed");
+      open(6, "open");
     } else if (stages[i].number === 5) {
-      setStageToGo(5);
-      setTimeout(() => {
-        setDoorOne("closed");
-      }, 1000);
-
-      setTimeout(() => {
-        setCurrentStage(5);
-        setDoorOne("open");
-      }, 3000);
+      close(5, "closed");
+      open(5, "open");
     } else if (stages[i].number === 4) {
-      setStageToGo(4);
-      setTimeout(() => {
-        setDoorOne("closed");
-      }, 1000);
-
-      setTimeout(() => {
-        setCurrentStage(4);
-        setDoorOne("open");
-      }, 3000);
-    } else if (stages[i].number === 4) {
-      setStageToGo(4);
-      setTimeout(() => {
-        setDoorOne("closed");
-      }, 1000);
-
-      setTimeout(() => {
-        setCurrentStage(4);
-        setDoorOne("open");
-      }, 3000);
+      close(4, "closed");
+      open(4, "open");
     } else if (stages[i].number === 3) {
-      setStageToGo(3);
-      setTimeout(() => {
-        setDoorOne("closed");
-      }, 1000);
-
-      setTimeout(() => {
-        setCurrentStage(3);
-        setDoorOne("open");
-      }, 3000);
+      close(3, "closed");
+      open(3, "open");
     } else if (stages[i].number === 2) {
-      setStageToGo(2);
-      setTimeout(() => {
-        setDoorOne("closed");
-      }, 1000);
-
-      setTimeout(() => {
-        setCurrentStage(2);
-        setDoorOne("open");
-      }, 3000);
+      close(2, "closed");
+      open(2, "open");
     } else if (stages[i].number === 1) {
-      setStageToGo(1);
-      setTimeout(() => {
-        setDoorOne("closed");
-      }, 1000);
-
-      setTimeout(() => {
-        setCurrentStage(1);
-        setDoorOne("open");
-      }, 3000);
+      close(1, "closed");
+      open(1, "open");
     } else if (stages[i].number === 0) {
-      setStageToGo(0);
-      setTimeout(() => {
-        setDoorOne("closed");
-      }, 1000);
-
-      setTimeout(() => {
-        setCurrentStage(0);
-        setDoorOne("open");
-      }, 3000);
+      close(0, "closed");
+      open(0, "open");
     }
   };
   return (
@@ -156,8 +72,8 @@ const BuildingOne = ({ currentStage, setCurrentStage, stageToGo, setStageToGo, d
         {stages.map((stage, index) => {
           return (
             <div className="flex  justify-center items-center border-4">
-              <div className=" w-24 py-7">{stage.name}</div>
-              <div className=" w-24 py-7 border-x-2 flex justify-center">
+              <div className=" w-24 py-6">{stage.name}</div>
+              <div className=" w-24 py-6 border-x-2 flex justify-center">
                 {stages[index].number === 10 && (
                   <BsCircle
                     size={25}
@@ -227,7 +143,7 @@ const BuildingOne = ({ currentStage, setCurrentStage, stageToGo, setStageToGo, d
                 )}
               </div>
               <div
-                className="py-7 flex justify-center cursor-pointer hover:opacity-60 w-24"
+                className="py-6 flex justify-center cursor-pointer hover:opacity-60 w-24"
                 onClick={() => {
                   handelClick(stages, index);
                 }}

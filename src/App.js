@@ -1,18 +1,19 @@
 import "./App.css";
-import { BsCircle, BsFillArrowDownSquareFill, BsArrowUpSquareFill } from "react-icons/bs";
 
-import { CgPlayButtonR, CgArrowsMergeAltH, CgArrowsShrinkH } from "react-icons/cg";
 import BuildingOne from "./components/BuildingOne";
 import PanelOne from "./components/PanelOne";
 import { useState } from "react";
 import BuildingTwo from "./components/BuildingTwo";
+import PanelTwo from "./components/PanelTwo";
 
 function App() {
   const [currentStage, setCurrentStage] = useState(3);
   const [stageToGo, setStageToGo] = useState(3);
-  const [arrowBuildingOne, setArrowBuildingOne] = useState("");
-
   const [doorOne, setDoorOne] = useState("open");
+
+  const [currentStageBTwo, setCurrentStageBTwo] = useState(3);
+  const [stageToGoBTwo, setStageToGoBTwo] = useState(3);
+  const [doorBTwo, setDoorBTwo] = useState("open");
 
   return (
     <div className="App flex gap-5">
@@ -25,8 +26,6 @@ function App() {
         setDoorOne={setDoorOne}
       />
       <PanelOne
-        arrowBuildingOne={arrowBuildingOne}
-        setArrowBuildingOne={setArrowBuildingOne}
         stageToGo={stageToGo}
         setStageToGo={setStageToGo}
         currentStage={currentStage}
@@ -36,12 +35,21 @@ function App() {
       />
 
       <BuildingTwo
-        currentStage={currentStage}
-        setCurrentStage={setCurrentStage}
-        stageToGo={stageToGo}
-        setStageToGo={setStageToGo}
-        doorOne={doorOne}
-        setDoorOne={setDoorOne}
+        currentStageBTwo={currentStageBTwo}
+        setCurrentStageBTwo={setCurrentStageBTwo}
+        stageToGoBTwo={stageToGoBTwo}
+        setStageToGoBTwo={setStageToGoBTwo}
+        doorBTwo={doorBTwo}
+        setDoorBTwo={setDoorBTwo}
+      />
+
+      <PanelTwo
+        currentStageBTwo={currentStageBTwo}
+        setCurrentStageBTwo={setCurrentStageBTwo}
+        stageToGoBTwo={stageToGoBTwo}
+        setStageToGoBTwo={setStageToGoBTwo}
+        doorBTwo={doorBTwo}
+        setDoorBTwo={setDoorBTwo}
       />
     </div>
   );
